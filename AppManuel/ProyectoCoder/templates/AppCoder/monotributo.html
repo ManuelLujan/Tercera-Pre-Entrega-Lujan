@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONOTRIBUTISTAS</title>
+</head>
+<body>
+    <h1>Adjuntar datos de monotributos</h1>
+    <ul>
+        {% for Monotributo in monotributistas %}
+            <li>{{ Monotributo.nombre}} - {{Monotributo.apellido}} - {{Monotributo.cuit}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
