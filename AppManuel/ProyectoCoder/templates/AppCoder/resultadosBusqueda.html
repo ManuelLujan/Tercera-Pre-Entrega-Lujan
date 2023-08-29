@@ -5,15 +5,16 @@
 {% block titulo %} Resultados de su busqueda {% endblock %}
 
 {% block contenido %} 
-{% if Vencimientos %}
+{% if monotributistas %}
     <h1>Resultados:</h1>
-    {% for cuit in Vencimientos %}
+    {% for Mono in monotributistas %}
 
-        <h3>{{Vencimientos.fecha_vencimiento}} - {{Vencimientos.cuit}}</h3>
+        <h3>{{Mono.nombre}} - {{Mono.apellido}} - {{Mono.cuit}}</h3>
 
     {% endfor %}
 
 {% else %}
 
     <h1>No se han encontrado resultados</h1>
+{% endif %}
 {% endblock %}
