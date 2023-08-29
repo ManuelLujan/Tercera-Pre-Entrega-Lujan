@@ -5,7 +5,7 @@
 {% block titulo %} Vencimientos {% endblock %}
 
 {% block contenido %} 
-    <h1> Busca en esta pagina tus vencimientos proximos o pasados</h1>
+    <h1> Ingresar los proximos vencimientos del usuario</h1>
     <form action="{% url 'vencimientos_servicio' %}" method="POST">{% csrf_token %}
         <table>
             {{ FormF.as_table }}
