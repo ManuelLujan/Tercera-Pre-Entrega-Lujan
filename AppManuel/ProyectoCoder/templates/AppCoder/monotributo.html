@@ -6,6 +6,22 @@
 
 {% block contenido %} 
     <h1>Adjuntar datos de monotributos</h1>
+    
+    <form action="{% url 'monotributistas' %}" method="POST">{% csrf_token %}
+        <table>
+            {{ formulario.as_table }}
+
+        </table>
+        <input type="submit" value="Agregar">
+
+
+
+
+    </form>
+    
+    
+    
+    
     <ul>
     {% for Monotributo in monotributistas %}
         <li>{{ Monotributo.nombre}} - {{Monotributo.apellido}} - {{Monotributo.cuit}} - {{Monotributo.vencimiento}}</li>
