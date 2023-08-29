@@ -1,0 +1,16 @@
+{%  extends "AppCoder/Herencia.html" %}
+
+{% load static %}
+
+{% block titulo %} Busqueda de Datos {% endblock %}
+
+{% block contenido %} 
+<form action="{% url 'resultadosBusqueda' %}" method="GET">
+    <input type="number" name="cuit" id="cuit" placeholder="Ingrese su CUIT">
+
+    <input type="submit" value="Buscar Datos">
+</form>
+<h2>{{mensaje}}</h2>
+
+
+{% endblock %}  
