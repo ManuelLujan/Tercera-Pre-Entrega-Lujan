@@ -56,7 +56,7 @@ def resultadosBusqueda(request):
     cuit=request.GET['cuit']
     if cuit != "":
         monotributistas = Monotributo.objects.filter(cuit__icontains=cuit)
-        return render(request, "AppCoder/resultadosBusqueda.html", {"cuit": monotributistas  })
+        return render(request, "AppCoder/resultadosBusqueda.html", {"monotributistas": monotributistas})
     else:
         return render(request,"AppCoder/busquedaDatos.html", {"mensaje": "debe ingresar datos para la busqueda!"})
 
